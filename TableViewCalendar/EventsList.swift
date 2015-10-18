@@ -1,15 +1,24 @@
 //
-//  ViewController.swift
-//  TableView
+//  EventsList.swift
+//  TableViewCalendar
 //
-//  Created by Yanting Cao on 15/10/14.
+//  Created by Yanting Cao on 15/10/15.
 //  Copyright © 2015年 Yanting Cao. All rights reserved.
 //
 
 import UIKit
-import EventKit
 
-class ViewController: UIViewController, UITableViewDataSource {
+class EventsList: UIViewController, UITableViewDataSource {
+//    
+//    let AM = [
+//        ("Meeting", "CS Building"),
+//        ("Lunch with Someone", "Union South")]
+//    
+//    let PM = [
+//        ("Class Discussion", "CS Building"),
+//        ("Information Session", "Union South"),
+//        ("Dinner with Somone", "State Street")]
+    
     
     let AM = [
         ("Meeting", "CS Building"),
@@ -20,6 +29,13 @@ class ViewController: UIViewController, UITableViewDataSource {
         ("Information Session", "Union South"),
         ("Dinner with Somone", "State Street")]
     
+    @IBAction func done(segue:UIStoryboardSegue) {
+        let carDetailVC = segue.sourceViewController as! AddEventViewController
+        newCar = carDetailVC.name
+        
+        cars.append(newCar)
+    }
+
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 2
@@ -77,4 +93,3 @@ class ViewController: UIViewController, UITableViewDataSource {
     
     
 }
-

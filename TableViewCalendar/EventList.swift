@@ -1,15 +1,13 @@
 //
-//  ViewController.swift
-//  TableView
+//  EventList.swift
+//  TableViewCalendar
 //
-//  Created by Yanting Cao on 15/10/14.
+//  Created by Yanting Cao on 15/10/15.
 //  Copyright © 2015年 Yanting Cao. All rights reserved.
 //
-
 import UIKit
-import EventKit
 
-class ViewController: UIViewController, UITableViewDataSource {
+class EventList: UIViewController, UITableViewDataSource {
     
     let AM = [
         ("Meeting", "CS Building"),
@@ -77,4 +75,3 @@ class ViewController: UIViewController, UITableViewDataSource {
     
     
 }
-
